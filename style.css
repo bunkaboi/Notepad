@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    background: rgb(102, 102, 102);
+    background: linear-gradient(90deg, rgba(102, 102, 102, 1) 0%, rgba(245, 245, 245, 1) 45%, rgba(134, 134, 134, 1) 100%);
+    font-family: 'Raleway', sans-serif;
+    filter: drop-shadow(4px 4px 5px #433d3d);
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 24px;
+    background-color: rgb(51, 128, 104);
+    color: white;
+    border-radius: 24px;
+}
+
+.Dropdown {
+    width: 250px;
+    padding: 4px;
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(12, 85, 55);
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.DropdownMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 20;
+}
+
+.flex {
+    display: flex;
+    gap: 8px;
+}
+
+button{
+    width: 260px;
+    height: 32px;
+    padding: 4px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    background-color:  rgb(12, 85, 55);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}   
+button:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+   cursor: pointer;
+}   
+
+@media (max-width: 616px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    #inputNote {
+        width: 250px;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputSection {
+        align-items: center;
+        padding: 24px;
+    }
+    .noteArea {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+.DropdownBullet {
+    width: 250px;
+    padding: 4px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(36, 124, 87);
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.DropdownBullet:hover {
+    background-color: rgb(12, 85, 55);
+}
+
+#inputNote {
+    height: 48px;
+    margin: 8px 0;
+    max-width: 520px;
+    padding: 4px;
+    border-radius: 8px;
+    border-color: rgb(155, 119, 77);
+    resize: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+#inputNote:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 16px;
+    opacity: 0.2;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.2;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.2;
+}
+
+.writtenNote {
+    height: 140px;
+    width: 98%;
+    background: none;
+    resize: none;
+    border-color: rgba(0, 0, 0, 0.0);
+    font-family: 'Nanum Pen Script';
+    font-size: 20px;
+}
+
+.writtenNote:focus {
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.writtenNote:hover {
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.writtenNoteX {
+    height: 140px;
+    width: 98%;
+    background: none;
+    resize: none;
+    border: none;
+    font-family: 'Nanum Pen Script';
+    font-size: 20px;
+}
+
+.writtenNoteX:focus {
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.notes {
+    width: 200px;
+    height: 200px;
+    margin: 16px;
+    font-size: 20px;
+    color: black;
+    filter: drop-shadow(10px 10px 10px #433d3d);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    font-family: 'Nanum Pen Script';
+    background-color: rgb(255, 160, 125);
+}
+
+.notes img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.notes img:hover {
+    opacity: 0.9;
+}
+
+.notesX {
+    width: 200px;
+    height: 200px;
+    margin-top: 16px;
+    margin-bottom: -130px;
+    font-size: 20px;
+    color: black;
+    filter: drop-shadow(10px 10px 10px #433d3d);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    font-family: 'Nanum Pen Script';
+    background-color: rgb(255, 160, 125);
+}
+
+.notesX img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.notesX img:hover {
+    opacity: 0.9;
+}
+
+.topX {
+    display: flex;
+    gap: 16px;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px;
+    gap: 30px;
+}
+
+.board {
+    display: flex;
+
+}
+
+.noteArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.pin {
+    width: 20px;
+    height: 20px;
+    rotate: 110deg;
+    border-radius: 20px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    filter: drop-shadow(3px -3px 1px #433d3d);
+}
+
+.checkedNoteArea {
+    text-decoration: line-through;
+    padding-left: 30px;
+    padding-right: 30px;
+}
